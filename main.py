@@ -23,15 +23,15 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 driver.get('https://www.youtube.com/')
 driver.maximize_window()
-# Closing "installation tab" of adblock extension.
 
+# Closing "installation tab" of adblock extension.
 pyautogui.keyDown('ctrl')
 pyautogui.press('w')
 time.sleep(1)
 pyautogui.keyUp('ctrl')
 
-# Clicking the "Accept All" button when you first launch YouTube.
-# Chromedriver/Selenium opens tab without any cookies/profiles saved from original Google Chrome.
+# Clicking the "Accept All" button when you first launch YouTube, since
+# Chromedriver/Selenium opens tab without any cookies/profiles saved from your original Google Chrome.
 driver.find_element(By.XPATH, '/html/body/ytd-app/ytd-consent-bump-v2-lightbox/tp-yt-paper-dialog/div['
                               '4]/div/div[6]/div[1]/ytd-button-renderer['
                               '2]/a/tp-yt-paper-button/yt-formatted-string').click()
