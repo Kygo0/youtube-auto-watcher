@@ -79,6 +79,7 @@ driver.find_element(By.XPATH, value="//button[@aria-label='Settings'][@aria-cont
 time.sleep(2)
 driver.find_element(By.XPATH, value='(//div[@class="ytp-menuitem-label"][text()="Quality"])').click()
 time.sleep(1)
+# Clicking the highest available quality.
 driver.find_element(By.XPATH, value='(//div[@class="ytp-menuitem"])[1]').click()
 
 
